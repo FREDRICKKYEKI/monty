@@ -80,6 +80,12 @@ void pint(stack_t **head, unsigned int line_num)
 	printf("%d\n", (*head)->n);
 }
 
+/**
+ * pop - pops the stack
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
+*/
 void pop(stack_t **head, unsigned int line_num)
 {
 	stack_t *h;
@@ -91,6 +97,6 @@ void pop(stack_t **head, unsigned int line_num)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	(*head) = (*head)->next;
+	*head = (*head)->next;
 	free(h);
 }
