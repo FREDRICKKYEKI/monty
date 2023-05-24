@@ -29,3 +29,15 @@ void add(stack_t **head, unsigned int line_num)
 	h->n += (*head)->n;
 	pop(head, line_num);
 }
+
+/**
+ * nop - doesn't do anything
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
+*/
+void nop(stack_t **head, unsigned int line_num)
+{
+	(void)head;
+	(void)line_num;
+}
