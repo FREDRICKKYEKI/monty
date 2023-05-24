@@ -14,7 +14,7 @@ void push(stack_t **head, unsigned int line_num)
 	if (!globl_vars.arg)
 	{
 		dprintf(2, "L%u: ", line_num);
-		dprintf(2, "usage1: push integer\n");
+		dprintf(2, "usage: push integer\n");
 		free_globl();
 		exit(EXIT_FAILURE);
 	}
@@ -24,7 +24,7 @@ void push(stack_t **head, unsigned int line_num)
 		if (!isdigit(globl_vars.arg[i]) && globl_vars.arg[i] != '-')
 		{
 			dprintf(2, "L%u: ", line_num);
-			dprintf(2, "usage2: push integer\n");
+			dprintf(2, "usage: push integer\n");
 			free_globl();
 			exit(EXIT_FAILURE);
 		}
