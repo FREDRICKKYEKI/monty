@@ -114,11 +114,8 @@ void swap(stack_t **head, unsigned int line_num)
 
 	h = *head;
 
-	while (h != NULL)
-	{
-		h = h->next;
-		i++;
-	}
+	for (; h != NULL; h = h->next, i++)
+		;
 
 	if (i < 2)
 	{
