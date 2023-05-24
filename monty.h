@@ -66,6 +66,7 @@ extern globl_t globl_vars;
 /*opcode functions -opcode_functions*/
 void push(stack_t **head, unsigned int line_num);
 void pall(stack_t **head, unsigned int line_num);
+void pint(stack_t **head, unsigned int line_num);
 
 /*get operation codes function - get_opcodes*/
 void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num);

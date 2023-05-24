@@ -58,3 +58,24 @@ void pall(stack_t **head, unsigned int line_num)
 		h = h->next;
 	}
 }
+
+/**
+ * pint - prints the value at the top of the stack
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
+*/
+void pint(stack_t **head, unsigned int line_num)
+{
+	(void)line_num;
+
+	if (*head == NULL)
+	{
+		dprintf(2, "L%u: ", line_num);
+		dprintf(2, "can't pint, stack empty\n");
+		free_globl();
+		exit(EXIT_FAILURE);
+	}
+
+	printf("%d\n", (*head)->n);
+}

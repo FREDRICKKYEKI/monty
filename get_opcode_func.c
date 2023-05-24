@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * get_opcode - gets funtion based on user input
+ * get_opcode_func - gets funtion based on user input
  *
  * @op_code: code passed from input
  *
@@ -12,6 +12,7 @@ void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num)
 	instruction_t opcode[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL},
 	};
 
