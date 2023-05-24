@@ -100,3 +100,38 @@ void pop(stack_t **head, unsigned int line_num)
 	*head = (*head)->next;
 	free(h);
 }
+
+/**
+ * swap - swaps the top two elements in the stack
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
+*/
+void swap(stack_t **head, unsigned int line_num)
+{
+	int i = 0;
+	stack_t *h = NULL;
+
+	h = *head;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	if (i < 2)
+	{
+		dprintf(2, "L%u: can't swap, stack too short\n", line_num);
+		free_globl();
+		exit(EXIT_FAILURE);
+	}
+
+	h = *head;
+	*head = (*head)->next;
+	h->next = (*head)->next;
+	h->prev = *head;
+	(*head)->next = h;
+	(*head)->prev = NULL;
+
+}
