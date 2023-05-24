@@ -90,7 +90,7 @@ void pop(stack_t **head, unsigned int line_num)
 {
 	stack_t *h;
 
-	if (head == NULL || *head == NULL)
+	if(head == NULL || *head == NULL)
 	{
 		dprintf(2, "L%u: can't pop an empty stack\n", line_num);
 		free_globl();
@@ -114,8 +114,11 @@ void swap(stack_t **head, unsigned int line_num)
 
 	h = *head;
 
-	for (; h != NULL; h = h->next, i++)
-		;
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
 
 	if (i < 2)
 	{

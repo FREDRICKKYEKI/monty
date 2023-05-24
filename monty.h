@@ -70,6 +70,9 @@ void pint(stack_t **head, unsigned int line_num);
 void pop(stack_t **head, unsigned int line_num);
 void swap(stack_t **head, unsigned int line_num);
 
+/*opcode functions -opcode_functions2*/
+void add(stack_t **head, unsigned int line_num);
+
 
 /*get operation codes function - get_opcodes*/
 void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num);
