@@ -4,11 +4,11 @@ globl_t globl_vars;
 
 /**
  * main - entry point of the program
- * 
+ *
  * @argc: the argument count
  * @argv: the argument array/vector
- * 
- * Return: 0 if success	
+ *
+ * Return: 0 if success
 */
 int main(int argc, char *argv[])
 {

@@ -3,7 +3,7 @@
 /**
  * free_globl - frees the global variables
  *
- * Return: void 
+ * Return: void
 */
 void free_globl(void)
 {
@@ -15,7 +15,7 @@ void free_globl(void)
 /**
  * init_globl - initializes the global variables' values
  * @fd: file descriptor
- * 
+ *
  * Return: void
 */
 void init_globl(FILE *fd)
@@ -30,8 +30,8 @@ void init_globl(FILE *fd)
 
 /**
  * get_file_desc - gets file descriptor of file
- * passed as argument and checks if can be opened 
- * 
+ * passed as argument and checks if can be opened
+ *
  * @argc: argument count
  * @argv: argument array/vector
  *
