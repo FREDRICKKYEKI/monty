@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * add - adds the top two elements of the stack
  * @head: pointer to head of doubly linked list

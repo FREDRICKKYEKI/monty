@@ -64,13 +64,12 @@ typedef struct instruction_s
 
 extern globl_t globl_vars;
 /*opcode functions -opcode_functions*/
+
 void push(stack_t **head, unsigned int line_num);
 void pall(stack_t **head, unsigned int line_num);
 void pint(stack_t **head, unsigned int line_num);
 void pop(stack_t **head, unsigned int line_num);
 void swap(stack_t **head, unsigned int line_num);
-
-/*opcode functions -opcode_functions2*/
 void add(stack_t **head, unsigned int line_num);
 
 
