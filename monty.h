@@ -83,6 +83,9 @@ void pstr(stack_t **head, unsigned int line_num);
 void queue(stack_t **head, unsigned int line_num);
 void stack(stack_t **head, unsigned int line_num);
 
+void rotr(stack_t **head, unsigned int line_num);
+void rotl(stack_t **head, unsigned int line_num);
+
 /*get operation codes function - get_opcodes*/
 void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num);
 
