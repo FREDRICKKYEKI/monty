@@ -87,3 +87,33 @@ void pstr(stack_t **head, unsigned int line_num)
 
 	printf("\n");
 }
+
+/**
+ * queue - sets the format of the data to a queue (FIFO)
+ *
+ * @head: head of the linked list
+ * @line_num: line number;
+ * Return: no return
+ */
+void queue(stack_t **head, unsigned int line_num)
+{
+	(void)head;
+	(void)line_num;
+
+	globl_vars.st_q = 0;
+}
+
+/**
+ * stack - sets the format fo the data to a stack (LIFO)
+ *
+ * @head: head of the linked list
+ * @line_num: line number;
+ * Return: no return
+ */
+void stack(stack_t **head, unsigned int line_num)
+{
+	(void)head;
+	(void)line_num;
+
+	globl_vars.st_q = 1;
+}
