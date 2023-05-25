@@ -3,9 +3,9 @@
  * mod - computes the rest of the division of the second top element
  * of the stack by the top element of the stack.
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void mod(stack_t **head, unsigned int line_num)
 {
@@ -43,9 +43,9 @@ void mod(stack_t **head, unsigned int line_num)
  * pchar - prints the char at the top of the stack,
  * followed by a new line
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void pchar(stack_t **head, unsigned int line_num)
 {
@@ -68,9 +68,9 @@ void pchar(stack_t **head, unsigned int line_num)
  * pstr - prints the string starting at the top of the stack,
  * followed by a new line.
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void pstr(stack_t **head, unsigned int line_num)
 {
@@ -91,9 +91,9 @@ void pstr(stack_t **head, unsigned int line_num)
 /**
  * queue - sets the format of the data to a queue (FIFO)
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void queue(stack_t **head, unsigned int line_num)
 {
@@ -106,9 +106,9 @@ void queue(stack_t **head, unsigned int line_num)
 /**
  * stack - sets the format fo the data to a stack (LIFO)
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void stack(stack_t **head, unsigned int line_num)
 {

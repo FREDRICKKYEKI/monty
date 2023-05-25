@@ -77,9 +77,9 @@ void sub(stack_t **head, unsigned int line_num)
  * _div - divides the second top element of the stack by the
  * top element of the stack.
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void _div(stack_t **head, unsigned int line_num)
 {
@@ -117,9 +117,9 @@ void _div(stack_t **head, unsigned int line_num)
  * mul - multiplies the second top element of the stack by the
  * top element of the stack.
  *
- * @head: head of the linked list
- * @line_num: line number;
- * Return: no return
+ * @head: pointer to head of doubly linked list
+ * @line_num: line number
+ * Return: void
  */
 void mul(stack_t **head, unsigned int line_num)
 {
