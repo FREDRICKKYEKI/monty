@@ -64,7 +64,7 @@ typedef struct instruction_s
 
 extern globl_t globl_vars;
 
-/*opcode functions -opcode_functions*/
+/*opcode functions*/
 void push(stack_t **head, unsigned int line_num);
 void pall(stack_t **head, unsigned int line_num);
 void pint(stack_t **head, unsigned int line_num);
@@ -74,8 +74,8 @@ void swap(stack_t **head, unsigned int line_num);
 void add(stack_t **head, unsigned int line_num);
 void nop(stack_t **head, unsigned int line_num);
 void sub(stack_t **head, unsigned int line_num);
-void div(stack_t **head, unsigned int line_num);
-
+void _div(stack_t **head, unsigned int line_num);
+void mul(stack_t **head, unsigned int line_num);
 
 /*get operation codes function - get_opcodes*/
 void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num);

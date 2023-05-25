@@ -50,18 +50,21 @@ void nop(stack_t **head, unsigned int line_num)
 */
 void sub(stack_t **head, unsigned int line_num)
 {
-	int m = 0;
+	int i = 0;
 	stack_t *h = NULL;
 
 	h = *head;
 
-	for (; h != NULL; h = h->next, m++)
-		;
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
 
-	if (m < 2)
+	if (i < 2)
 	{
 		dprintf(2, "L%u: can't sub, stack too short\n", line_num);
-		free_vglo();
+		free_globl();
 		exit(EXIT_FAILURE);
 	}
 
@@ -78,31 +81,67 @@ void sub(stack_t **head, unsigned int line_num)
  * @line_num: line number;
  * Return: no return
  */
-void div(stack_t **head, unsigned int line_num)
+void _div(stack_t **head, unsigned int line_num)
 {
-	int m = 0;
+	int i = 0;
 	stack_t *h = NULL;
 
 	h = *head;
 
-	for (; h != NULL; h = h->next, m++)
-		;
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
 
-	if (m < 2)
+	if (i < 2)
 	{
 		dprintf(2, "L%u: can't div, stack too short\n", line_num);
-		free_vglo();
+		free_globl();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*head)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", line_num);
-		free_vglo();
+		free_globl();
 		exit(EXIT_FAILURE);
 	}
 
 	h = (*head)->next;
 	h->n /= (*head)->n;
+	pop(head, line_num);
+}
+
+/**
+ * mul - multiplies the second top element of the stack by the 
+ * top element of the stack.
+ * 
+ * @head: head of the linked list
+ * @line_num: line number;
+ * Return: no return
+ */
+void mul(stack_t **head, unsigned int line_num)
+{
+	int i = 0;
+	stack_t *h = NULL;
+
+	h = *head;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	if (i < 2)
+	{
+		dprintf(2, "L%u: can't mul, stack too short\n", line_num);
+		free_globl();
+		exit(EXIT_FAILURE);
+	}
+
+	h = (*head)->next;
+	h->n *= (*head)->n;
 	pop(head, line_num);
 }
