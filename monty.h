@@ -78,6 +78,8 @@ void _div(stack_t **head, unsigned int line_num);
 void mul(stack_t **head, unsigned int line_num);
 void mod(stack_t **head, unsigned int line_num);
 
+void pchar(stack_t **head, unsigned int line_num);
+
 /*get operation codes function - get_opcodes*/
 void (*get_opcode_func(char *op_code))(stack_t **stack, unsigned int line_num);
 
